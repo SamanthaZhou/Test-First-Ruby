@@ -7,6 +7,19 @@
 # Difficulty: easy.
 
 def longest_word(sentence)
+  longest=""
+  words = sentence.split(" ")
+  i=0
+
+  while (i<words.length)
+    if (words[i].length<words[i+1].length)
+      i += 1
+    else
+      longest=words[i]
+    end
+  end
+  return longest
+  puts(longest)
 end
 
 # These are tests to check that your code is working. After writing

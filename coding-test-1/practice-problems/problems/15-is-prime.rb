@@ -13,6 +13,21 @@
 # Difficulty: medium.
 
 def is_prime?(number)
+    number = number.to_i
+    divisible_by = []
+    i=2
+    while i < number
+        if number % i == 0
+            divisible_by.push(i)
+        end
+        i += 1
+    end
+    puts(divisible_by)
+    if divisible_by.length == 0
+        return true
+    else
+        return false
+    end
 end
 
 # These are tests to check that your code is working. After writing

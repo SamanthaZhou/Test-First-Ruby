@@ -7,7 +7,24 @@
 #
 # Difficulty: medium.
 
+# What did I do wrong: 1. too redundant and messy 2. % by 2 3. += current.to_s needs to go outside of the if idx > 0 condition
 def dasherize_number(num)
+  new_num = ""
+  num_s = num.to_s
+  idx = 0
+  while idx < num_s.length
+    current = num_s[idx].to_i
+    previous = num_s[idx-1].to_i
+      if idx > 0
+        if (previous % 2 == 1) || (current % 2 == 1)
+          new_num += "-"
+        end
+      end
+      new_num += current.to_s
+      idx += 1
+  end
+  puts(new_num)
+  return new_num
 end
 
 # These are tests to check that your code is working. After writing

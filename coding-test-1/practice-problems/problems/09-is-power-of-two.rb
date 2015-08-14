@@ -8,6 +8,17 @@
 # Difficulty: medium.
 
 def is_power_of_two?(num)
+    int = num.to_i
+    while int >= 1.0
+        int = int / 2.0
+        if int = 1.0
+            return true
+        elsif int < 1.0
+            return false
+        else
+            puts("Unknown option")
+        end
+    end
 end
 
 # These are tests to check that your code is working. After writing

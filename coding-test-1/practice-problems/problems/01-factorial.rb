@@ -5,7 +5,16 @@
 #
 # Difficulty: easy.
 
+#What did I do wrong: 1. didn't write return answer
+
 def factorial(n)
+  i = 1
+  answer = 1
+  while i < n+1
+    answer = i * answer
+    i = i + 1
+  end
+  return answer
 end
 
 # These are tests to check that your code is working. After writing

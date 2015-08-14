@@ -23,6 +23,15 @@ def is_prime?(number)
 end
 
 def nth_prime(n)
+  which_prime = []
+  idx = 2
+  while which_prime.length < n.to_i
+    if is_prime?(idx) == true
+      which_prime.push(true)
+    end
+    idx += 1
+  end
+  return idx-1
 end
 
 # These are tests to check that your code is working. After writing
@@ -33,3 +42,4 @@ puts('nth_prime(2) == 3: ' + (nth_prime(2) == 3).to_s)
 puts('nth_prime(3) == 5: ' + (nth_prime(3) == 5).to_s)
 puts('nth_prime(4) == 7: ' + (nth_prime(4) == 7).to_s)
 puts('nth_prime(5) == 11: ' + (nth_prime(5) == 11).to_s)
+puts('nth_prime(10) == 29: ' + (nth_prime(10) == 29).to_s)

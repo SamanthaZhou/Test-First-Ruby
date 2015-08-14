@@ -4,7 +4,18 @@
 #
 # Difficulty: easy.
 
+#What did I do wrong: don't need the extra parenthesis around the string
+
 def count_vowels(string)
+    i=0
+    count=0
+    while i <= string.length
+        if (string[i]=="a"||string[i]=="e"||string[i]=="i"||string[i]=="o"||string[i]=="u"||string[i]=="y")
+            count += 1
+        end
+        i+=1
+    end
+    return count
 end
 
 # These are tests to check that your code is working. After writing
